@@ -13,11 +13,13 @@ t_data <- read_csv("data/GLB.Ts+DSST.csv", skip =1, na = "***",
   select(year = Year, t_diff = 'J-D') %>% 
   drop_na()
 
-annotation <- t_data %>% 
+# used in geom_text - data
+annotation <- t_data %>%
   slice(1, n()) %>% # first and last row of the dataframe
   mutate(t_diff = 0,
          x = year + c(-5, 5)) # to bump the labels out 
 
+# used in geom_text - label
 max_t_diff <- format(round(max(t_data$t_diff), 1), nsmall=1)
 
 t_data %>% 
