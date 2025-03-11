@@ -38,6 +38,5 @@ t_data %>%
     plot.background = element_rect(fill = "black")
   )
 
-
 ggsave("figures/warming_stripes.png", width = 8, height = 4.5)
 

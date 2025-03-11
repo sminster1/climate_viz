@@ -2,6 +2,7 @@ library(tidyverse)
 library(scales) # needed to use the "rescale()" function
 library(glue) # needed to make the title dynamic
 
+# temperature_bar_plot.R
 # Episode CC215
 
 # google for "uni-code degree symbol R" to get code
