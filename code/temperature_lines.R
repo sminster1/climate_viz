@@ -4,7 +4,7 @@ library(tidyverse)
 # https://www.youtube.com/watch?v=gOyya2DLVfQ.
 
 t_diff <- read_csv("data/GLB.Ts+dSST.csv", skip=1, na = "***") %>% 
-  select(year=Year, month.abb) %>% 
+  select(year=Year, all_of(month.abb)) %>% 
   pivot_longer(-year, names_to="month", values_to="t_diff") %>% 
   drop_na() %>% 
   mutate(month = factor(month, levels = c(month.abb)))
