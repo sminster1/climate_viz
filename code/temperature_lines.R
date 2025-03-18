@@ -60,7 +60,7 @@ t_data %>%
        y = "Temperature change since pre-industrial time [\u00B0C]",
        title = "Global temperature change since 1880 by month") +
   theme(
-    panel.background = element_rect(fill = "black"),
+    panel.background = element_rect(fill = "black", color="white", size=1),
     plot.background = element_rect(fill = "#444444"),
     panel.grid = element_blank(),
     axis.text = element_text(color = "white", size = 13),
